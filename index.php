@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">  
+<?php
+session_start();
+if(isset($_SESSION['loggedusername'])){
+    $loggeduser = $_SESSION['loggedusernamne'];
+}
+
+else{
+    header("Location: signIn.php");
+}
+
+?>
+<head>
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">PraRoz</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="Home.html">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">DESIGN</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+
+        </div>
+        <div class="content">
+            <div class="join">
+                <h2>Welcome!</h2>
+                <h1>to the site, <?php echo "<h1>$loggeduser</h1>" ?></h1>
+         
+                    
+            </div>     
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>     
