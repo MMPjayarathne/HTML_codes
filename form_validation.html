@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="form_validation.js"></script>
+</head>
+<body>
+    <p id="errorMsg" style="color: red;"></p>
+    <form name="loginForm" onsubmit="return validateForm()">
+        <label for="username" id = "Uname" >Username</label>
+        <input type="text" name="username" onkeypress="validateUsername()">
+        <label for="password" id = "pw">Password</label>
+        <input type="password" name="password">
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
